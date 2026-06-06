@@ -11,7 +11,6 @@ def call(Map config = [:]) {
         docker rm -f ${appName} || true
         docker run -d \
           --name ${appName} \
-          --network jenkins \
           -p ${port}:3000 \
           ${imageName}:${tag}
     """
