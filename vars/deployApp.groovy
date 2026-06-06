@@ -12,7 +12,7 @@ def call(Map config = [:]) {
         docker run -d \
           --name ${appName} \
           --network jenkins \
-          -p ${port}:${port} \
+          -p ${port}:3000 \
           ${imageName}:${tag}
     """
     echo "App deployed — http://localhost:${port}"
